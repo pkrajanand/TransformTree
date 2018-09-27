@@ -41,7 +41,7 @@ def build_groups_to_nodes_tree(nodes):
 
 def main():
     
-    _hosts_to_groups_tree = yaml_to_dict('input.yaml')
+    _hosts_to_groups_tree = yaml_to_dict('resources/input.yaml')
     
     _groups_to_nodes_tree = to_groups_to_nodes_tree(_hosts_to_groups_tree)
 
