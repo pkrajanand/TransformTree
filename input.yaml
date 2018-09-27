@@ -1,0 +1,18 @@
+hosts:
+  node1.customer-cee.nw.dev.com:
+    vars:
+      var1: 123
+      var2: 456
+    groups:
+      - cee
+      - nw
+      - dev
+      
+  node2.customer-cee.nw.dev.com:
+    vars:
+      var1: 123
+      var2: 456
+    groups:
+      - cee
+      - nw
+      - dev
