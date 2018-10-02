@@ -1,6 +1,12 @@
 # TransformTree
 
-A python utility to transform a yaml file content with a specific structure to print another structure in json format.
+A python utility to transform a yaml file content with a specific structure to print another specified structure in json format.
+
+### User Acceptance Testing
+
+```
+python3 -m doctest -v test_inventory.txt
+```
 
 ### Usage
 
@@ -19,7 +25,7 @@ python3 inventory.py
   - input.yaml  
 ```
 
-### Input Sample:
+### Input Sample to be present inventory/input.yaml:
 
 ``` 
 hosts:
@@ -43,7 +49,7 @@ hosts:
 
 ```      
 
-### Output Sample:
+### Output Sample generated:
 
 ```
 {
