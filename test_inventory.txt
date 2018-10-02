@@ -1,9 +1,12 @@
-This is a doctest based regression suite for inventory.py
-Each '>>' line is run as if in a python shell, and counts as a test.
-The next line, if not '>>' is the expected output of the previous line.
-If anything doesn't match exactly (including trailing spaces), the test fails.
- 
->>> from inventory import main
-{"project-abc": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dc-1": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dev": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "_meta": {"hostvars": {"node1.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}, "node2.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}}}}
->>> main()
-{"project-abc": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dc-1": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dev": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "_meta": {"hostvars": {"node1.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}, "node2.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}}}}
+The ``inventory`` module
+======================
+
+Using ``main``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``process`` from the ``inventory`` module:
+
+>>> from inventory import process
+>>> process()
+'{"project-abc": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dc-1": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dev": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "_meta": {"hostvars": {"node1.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}, "node2.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}}}}'

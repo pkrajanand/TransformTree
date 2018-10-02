@@ -31,10 +31,14 @@ def build_host_vars_subtree(nodes):
   host_vars["hostvars"] =  node_vars
   return host_vars
 
-def main():
+def process():
   input_data = parser.generate_data()
   groupwise_host_info = build_groupwise_host_info(input_data)
   jsonOutput = parser.to_json(groupwise_host_info)
+  return jsonOutput
+
+def main():
+  jsonOutput = process()
   print(jsonOutput)
 
 main()
