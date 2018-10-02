@@ -1,4 +1,4 @@
-# TransformTree
+# TransformTree [![Build Status](https://travis-ci.com/pkrajanand/TransformTree.svg?branch=master)](https://travis-ci.com/pkrajanand/TransformTree)
 
 A python utility to transform a yaml file content with a specific structure to print another specified structure in json format.
 
