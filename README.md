@@ -5,22 +5,19 @@ A python utility to transform a yaml file content with a specific structure to p
 ### Usage
 
 ```
-python3 transformTree.py
+python3 inventory.py
 ```
 ### Project Structure
 
 ```
-- transformTree.py
+- inventory.py
   - build_groupwise_host_info function
-- files
-  - __init__.py
-  - parser.py
-    - to_dict function
-    - to_json function
-- resources
+- parser.py
+  - generate dict function
+  - to_json function
+- inventory
   - input.yaml  
 ```
-
 
 ### Input Sample:
 
@@ -71,16 +68,12 @@ hosts:
   "_meta": {
     "hostvars": {
       "node1.project1.datacenter1.dev.com": {
-        "vars": {
-          "var1": 123,
-          "var2": 456
-        }
+        "var1": 123,
+        "var2": 456
       },
       "node2.project1.datacenter1.dev.com": {
-        "vars": {
-          "var1": 123,
-          "var2": 456
-        }
+        "var1": 123,
+        "var2": 456
       }
     }
   }
