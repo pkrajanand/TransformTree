@@ -7,6 +7,8 @@ Using ``main``
 This is an example text file in reStructuredText format.  First import
 ``process`` from the ``inventory`` module:
 
+>>> import json
+>>> from jsondiff import diff
 >>> from inventory import process
->>> process()
-'{"_meta": {"hostvars": {"node1.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}, "node2.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}}}, "dc-1": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dev": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "project-abc": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}}'
+>>> diff(json.loads(process()), json.loads('{"_meta": {"hostvars": {"node1.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}, "node2.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}}}, "dc-1": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dev": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "project-abc": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}}'))
+{}
