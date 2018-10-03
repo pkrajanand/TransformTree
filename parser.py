@@ -17,5 +17,5 @@ def generate_data():
   return data
 
 def to_json(convert_to_json):
-  result = json.dumps(convert_to_json)
+  result = json.dumps(convert_to_json, sort_keys=True)
   return result

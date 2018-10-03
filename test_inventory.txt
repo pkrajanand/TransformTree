@@ -7,7 +7,6 @@ Using ``main``
 This is an example text file in reStructuredText format.  First import
 ``process`` from the ``inventory`` module:
 
->>> import json
 >>> from inventory import process
->>> json.loads(process())
-{'project-abc': {'hosts': ['node1.project-abc.dc-1.dev.com', 'node2.project-abc.dc-1.dev.com']}, 'dc-1': {'hosts': ['node1.project-abc.dc-1.dev.com', 'node2.project-abc.dc-1.dev.com']}, 'dev': {'hosts': ['node1.project-abc.dc-1.dev.com', 'node2.project-abc.dc-1.dev.com']}, '_meta': {'hostvars': {'node1.project-abc.dc-1.dev.com': {'var1': 123, 'var2': 456}, 'node2.project-abc.dc-1.dev.com': {'var1': 123, 'var2': 456}}}}
+>>> process()
+'{"_meta": {"hostvars": {"node1.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}, "node2.project-abc.dc-1.dev.com": {"var1": 123, "var2": 456}}}, "dc-1": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "dev": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}, "project-abc": {"hosts": ["node1.project-abc.dc-1.dev.com", "node2.project-abc.dc-1.dev.com"]}}'
